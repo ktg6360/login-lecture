@@ -12,5 +12,8 @@ function login() {
     psword: psword.value,
   };
 
-  console.log(req);
+  fetch("/login", {
+    method: "POST",
+    body: JSON.stringify(req),
+  });
 };
